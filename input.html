@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form>
+        <p>color 类型用在input字段主要用于选取颜色,值为颜色的值</p>
+        <input type="color" name="favcolor">
+        <p>date 类型允许你从一个日期选择器选择一个日期,值为日期的值</p>
+        <input type="date" name="bday">
+        <p>time 类型允许你选择一个时间,值为日期的值</p>
+        <input type="time" name="time">
+        <p>datetime-local 类型允许你选择一个日期和时间 (无时区)</p>
+        <input type="datetime-local" name="bdaytime">
+        <p>month 类型允许你选择一个月份,和date区别是值得格式不一样</p>
+        <input type="month" name="month">
+        <p>week 类型允许你选择周和年</p>
+        <input type="week" name="week">
+        <p>email 类型用于应该包含 e-mail 地址的输入域,会自动校验格式</p>
+        <input type="email" name="email">   
+        <p>number 类型用于应该包含数值的输入域,可以设置输入值的范围</p>
+        <input type="number" name="number" min="1" max="10">
+        <p>range 类型用于应该包含数值的输入域,range是滑动条</p>
+        <input type="range" name="range" min="1" max="10">
+        <p>search 类型用于搜索域，比如站点搜索或 Google 搜索</p>
+        <input type="search" name="search">
+        <p>tel 类型定义输入电话的格式</p>
+        <input type="tel" name="telephony">
+        <p>url 类型用于应该包含 URL 地址的输入域,会自动检验格式</p>
+        <input type="url" name="url">
+        <!--下面的为表单元素，不是input类型了-->
+        <p>datalist表单元素</p>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Opera"></option>
+        </datalist>
+        <p>keygen元素用于表单的密钥对生成器字段</p>
+        用户名: <input type="text" name="usr_name">
+        加密: <keygen name="security">        
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <p>output元素用于不同类型的输出，比如计算或脚本输出</p>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0<input type="range" id="a" value="50">100
+        +<input type="number" id="b" value="50">
+        =<output name="x"></output>
+    </form>
+</body>
+</html>
