@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <p>搜索字符串 "w3cSchool", 并显示匹配的起始位置：</p>
+    <button onclick="myFunction()">点我</button>
+    <p id="demo"></p>
+    <p>在下面文本中使用test搜索字符e：The best things in life are free</p>
+    <button onclick="useTest()">开始吧</button>
+    <p id="demo1"></p>
+    <p>在下面文本中使用exec搜索字符e：The best things in life are free</p>
+    <button onclick="useExec()">开始吧</button>
+    <p id="demo2"></p>
+<script>
+function myFunction() {
+    var str = "Visit W3cSchool!"; 
+    var n = str.search(/w3cSchool/i);
+    document.getElementById("demo").innerHTML = n;
+}
+
+function useTest(){
+    var parrern=new RegExp("e");
+    document.getElementById("demo1").innerHTML=parrern.test("The best things in life are free");
+}
+
+function useExec(){
+    var parrern=new RegExp("est");
+    var arrays=parrern.exec("The best things in life are free");
+    var str="";
+    for(var i=0;i<arrays.length;i++){
+        str+=arrays[i];
+    }
+    document.getElementById("demo2").innerHTML=str;
+}
+
+</script>
+
+</body>
+</html>
+			
