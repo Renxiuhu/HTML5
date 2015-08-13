@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>css</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            float: left;
+        }   
+        a{
+            display: block;
+            width: 60px;
+        }
+        
+        #div1{
+            border: 2px solid;
+            border-radius: 20px;
+            box-shadow: 10px 10px 5px #888888;          
+        }
+        #div2{
+            background-image: url(resource/daitu.PNG);
+            background-size: 100px 100px;   
+            background-origin:border-box;
+            background-clip: border-box;
+        }
+        h3{
+            text-shadow: 5px 5px 5px #ff0000;   
+        }
+    </style>
+</head>
+<body>
+    <div data-role="header" id="div1">
+        <h3>演示CSS导航</h3>
+        <ul>
+            <li><a href="css1.html">CSS1</a></li>
+            <li><a href="css2.html">CSS2</a></li>
+            <li><a href="css3.html">CSS3</a></li>
+            <li><a href="css4.html">CSS4</a></li>
+        </ul>
+    </div>
+    <br><br>
+    <div id="div2">
+        <p>正文</p>
+    </div>
+</body>
+</html>
