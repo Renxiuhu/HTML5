@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8">
 <head>
   <script type="text/javascript">     
       function playorNot(){
@@ -9,31 +10,59 @@
           else
               myvideo.pause();
       }
+      function beNext(){
+        var myvideo=document.getElementById("video1");
+        myvideo.currentTime+=10;
+      }
+      function bePre(){
+        var myvideo=document.getElementById("video1");
+        myvideo.currentTime-=10;
+      }
+      function befaster(){
+        var myvideo=document.getElementById("video1");
+        myvideo.playbackRate+=2;
+      }
+      function beSlower(){
+        var myvideo=document.getElementById("video1");
+        myvideo.playbackRate-=2;
+      }
       function beBig(){
           var myvideo=document.getElementById("video1");
-          myvideo.width=560;   
+          myvideo.width=1280;
+          myvideo.height=720;   
       }
       function beSmall(){
           var myvideo=document.getElementById("video1");
-          myvideo.width=320;   
+          myvideo.width=640;
+          myvideo.height=320;     
       }
       function beNormal(){
           var myvideo=document.getElementById("video1");
-          myvideo.width=420;   
+          myvideo.width=800;
+          myvideo.height=400;     
+      }
+      function beFullScreen(){
+          var myvideo=document.getElementById("video1");
+          myvideo.msRequestFullscreen();
       }
   </script>  
 </head>
 <body>
 <div style="text-align:center"> 
-    <video id="video1" width="420">
-        <source src="resource/lost.mp4" type="video/mp4">
+    <video id="video1" width="800" height="400" controls>
+        <source src="resource/01.mp4" type="video/mp4">
         抱歉，你的浏览器不支持video标签
     </video>
     <br>
     <button onclick="playorNot()">播放/暂停</button>
+    <button onclick="beNext()">快进</button>
+    <button onclick="bePre()">快退</button>
+    <button onclick="befaster()">速度+</button>
+    <button onclick="beSlower()">速度-</button>
     <button onclick="beBig()">放大</button>
     <button onclick="beSmall()">缩小</button>
     <button onclick="beNormal()">普通</button>
+    <button onclick="beFullScreen()">全屏</button>
 </div>
 </body>
 </html>			
